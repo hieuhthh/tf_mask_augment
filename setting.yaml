@@ -5,7 +5,7 @@ CUDA_VISIBLE_DEVICES: "0"
 im_size: 160
 im_size_before_crop: 180 # ~ for not using this
 label_mode: cate_int
-BATCH_SIZE: 128
+BATCH_SIZE: 256
 
 path_to_dlib_model: 'download/shape_predictor_68_face_landmarks.dat'
 

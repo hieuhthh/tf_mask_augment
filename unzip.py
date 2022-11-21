@@ -9,27 +9,12 @@ from_dir = path_join(route, 'download')
 des = path_join(route, 'unzip')
 mkdir(des)
 
-filename = 'vnceleb'
-zip_file = path_join(from_dir, filename + '.zip')
-with zipfile.ZipFile(zip_file, 'r') as zip_ref:
-    zip_ref.extractall(des)
-
-# filename = 'AFDB_masked_face_dataset'
+# filename = 'vnceleb'
 # zip_file = path_join(from_dir, filename + '.zip')
 # with zipfile.ZipFile(zip_file, 'r') as zip_ref:
 #     zip_ref.extractall(des)
 
-# filename = 'final'
-# zip_file = path_join(from_dir, filename + '.zip')
-# with zipfile.ZipFile(zip_file, 'r') as zip_ref:
-#     zip_ref.extractall(des)
-
-# filename = 'masked_ms1m'
-# zip_file = path_join(from_dir, filename + '.zip')
-# with zipfile.ZipFile(zip_file, 'r') as zip_ref:
-#     zip_ref.extractall(des)
-
-# filename = 'RWMFD_part_2_pro'
+# filename = 'gnv_dataset'
 # zip_file = path_join(from_dir, filename + '.zip')
 # with zipfile.ZipFile(zip_file, 'r') as zip_ref:
 #     zip_ref.extractall(des)

@@ -20,13 +20,15 @@ def clean_image(route, to_des, im_size):
     def task(route, all_class, list_cls, to_des, im_size):
         print('Start task')
 
+        sign = route.split('/')[-1]
+
         for cl in list_cls:
             path2cl = os.path.join(route, cl)
 
             if len(os.listdir(path2cl)) < 1:
                 continue
 
-            des_class = os.path.join(to_des, cl)
+            des_class = os.path.join(to_des, sign + '_' + cl)
 
             try:
                 os.mkdir(des_class)
@@ -71,42 +73,25 @@ def clean_image(route, to_des, im_size):
     pool.close()
     pool.join()
 
-# if __name__ == '__main__':
-#     route = '/home/lap14880/face_bucket_huy/masked_glint'
-#     to_des = 'glint_clean'
-
-#     try:
-#         shutil.rmtree(to_des)
-#     except:
-#         pass
-
-#     try:
-#         os.mkdir(to_des)
-#     except:
-#         pass
-
-#     im_size = 160
-#     clean_image(route, to_des, im_size)
-
-#     img = cv2.imread('glint_clean/masked_glintid_0/masked_0_0.jpg')
-#     cv2.imwrite('glintclean.jpg', img)
-
 if __name__ == '__main__':
-    route = '/home/lap14880/hieunmt/tf_mask/dataset_not_clean'
-    to_des = 'dataset_clean'
+    to_des = 'dataset'
+    im_size = 160
 
-    try:
-        shutil.rmtree(to_des)
-    except:
-        pass
+    # try:
+    #     shutil.rmtree(to_des)
+    # except:
+    #     pass
 
     try:
         os.mkdir(to_des)
     except:
         pass
 
-    im_size = 160
-    clean_image(route, to_des, im_size)
+    # route = 'unzip/gnv_dataset'
+    # clean_image(route, to_des, im_size)
 
-    img = cv2.imread('glint_clean/masked_glintid_0/masked_0_0.jpg')
-    cv2.imwrite('glintclean.jpg', img)
+    # route = 'unzip/VN-celeb'
+    # clean_image(route, to_des, im_size)
+
+    # route = 'unzip/glint360k_224'
+    # clean_image(route, to_des, im_size)

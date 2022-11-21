@@ -34,8 +34,7 @@ print('epochs:', epochs)
 seedEverything(seed)
 print('BATCH_SIZE:', BATCH_SIZE)
 
-route_dataset = path_join(route, 'dataset_clean')
-route_dataset = '/home/lap14880/hieunmt/tf_mask_gen/unzip/VN-celeb'
+route_dataset = path_join(route, 'dataset')
 print('route_dataset:', route_dataset)
 
 tool_gen_mask = build_gen_mask(path_to_dlib_model)
